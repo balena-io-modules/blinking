@@ -1,0 +1,22 @@
+{
+  "name": "blinker",
+  "version": "0.0.0",
+  "description": "A module for \"blinking\" to a file (useful for writing to an LED file for actual blinks)",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "./node_modules/.bin/coffee -c index.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:rulemotion/blinker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "~2.5.3"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.8.0"
+  }
+}
