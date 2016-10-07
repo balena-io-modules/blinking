@@ -4,7 +4,7 @@
   "description": "A module for \"blinking\" to a file (useful for writing to an LED file for actual blinks)",
   "main": "index.js",
   "scripts": {
-    "prepublish": "./node_modules/.bin/coffee -c index.coffee",
+    "prepublish": "coffee -c index.coffee",
     "lint": "resin-lint index.coffee",
     "test": "npm run lint"
   },
@@ -18,6 +18,6 @@
     "bluebird": "^2.6.0"
   },
   "devDependencies": {
-    "coffee-script": "~1.8.0"
+    "coffee-script": "~1.11.0"
   }
 }
