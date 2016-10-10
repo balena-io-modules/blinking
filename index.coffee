@@ -1,5 +1,9 @@
 Promise = require 'bluebird'
 fs = Promise.promisifyAll require 'fs'
+Promise.config(
+	# Enable cancellation
+	cancellation: true
+)
 
 # Helps in blinking the LED from the given end point.
 module.exports = exports = (ledFile) ->
@@ -16,7 +20,7 @@ module.exports = exports = (ledFile) ->
 	blink.pattern = do ->
 		blinking = null
 		start = (pattern) ->
-			Promise.resolve([0...pattern.blinks]).cancellable()
+			Promise.resolve([0...pattern.blinks])
 			.each ->
 				blink(pattern.onDuration)
 				.delay(pattern.offDuration)
@@ -35,7 +39,7 @@ module.exports = exports = (ledFile) ->
 				return
 			stop: ->
 				return false if not blinking?
-				blinking.cancel().catch(Promise.CancellationError, ->)
+				blinking.cancel()
 				ledOff()
 				blinking = null
 		}
