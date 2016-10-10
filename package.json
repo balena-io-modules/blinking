@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prepublish": "./node_modules/.bin/coffee -c index.coffee",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "resin-lint index.coffee",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
