@@ -1,0 +1,15 @@
+- version: 0.0.3
+  date: '2016-10-10T20:40:32Z'
+  commits:
+    - hash: 0b7beca7f88455e08bf81a2dc66b42d8564c7852
+      author: Pagan Gazzard
+      subject: Update to coffee-script 1.11
+      body: ''
+    - hash: 06a4429588e5e4e4af3041da393b2a377e60c02d
+      author: Pagan Gazzard
+      subject: Add resin-lint
+      body: ''
+    - hash: 59ca68f6e3445429fd72e3acd0482ea7850081ac
+      author: Pagan Gazzard
+      subject: Update to bluebird 3
+      body: ''
