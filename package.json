@@ -1,6 +1,6 @@
 {
   "name": "blinking",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A module for \"blinking\" to a file (useful for writing to an LED file for actual blinks)",
   "main": "index.js",
   "scripts": {

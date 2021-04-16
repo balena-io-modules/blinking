@@ -1,3 +1,13 @@
+- commits:
+    - subject: Convert to typescript
+      hash: 54aa604c3877eddb47791e37ee0bc9565e046227
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.4
+  date: 2021-04-16T11:49:49.070Z
 - version: 0.0.3
   date: '2016-10-10T20:40:32Z'
   commits:
