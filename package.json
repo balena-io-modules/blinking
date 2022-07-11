@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prepare": "npx tsc",
-    "lint": "balena-lint --typescript --fix index.ts",
-    "test": "npm run lint && npm run prepare"
+    "lint": "balena-lint --typescript -t tsconfig.json --fix index.ts",
+    "test": "npm run lint && mocha --config test/.mocharc.js && npm run prepare"
   },
   "repository": {
     "type": "git",
@@ -14,12 +14,27 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "^16.16.0",
+    "npm": "^8.11.0"
+  },
   "dependencies": {
-    "@types/bluebird": "^3.5.33",
-    "bluebird": "^3.0.0"
+    "bluebird": "^3.7.2"
   },
   "devDependencies": {
-    "@balena/lint": "^5.4.1",
-    "typescript": "^4.2.4"
+    "@balena/lint": "^6.2.0",
+    "@types/bluebird": "^3.5.36",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/mock-fs": "^4.13.1",
+    "@types/node": "^18.0.3",
+    "@types/sinon": "^10.0.12",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "mock-fs": "^5.1.2",
+    "sinon": "^14.0.0",
+    "sinon-chai": "^3.7.0",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
   }
 }
