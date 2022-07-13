@@ -1,7 +1,19 @@
 - commits:
+    - subject: Add tests, change writeFile to write string, clarify docs
+      hash: c5cfb08dfa8ba34f507f1b2eaa66dc056495c08d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Christina Wang <christina@balena.io>
+        signed-off-by: Christina Wang <christina@balena.io>
+      author: Christina Wang
+  version: 0.0.5
+  date: 2022-07-13T21:29:27.264Z
+- commits:
     - subject: Convert to typescript
       hash: 54aa604c3877eddb47791e37ee0bc9565e046227
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -9,17 +21,17 @@
   version: 0.0.4
   date: 2021-04-16T11:49:49.070Z
 - version: 0.0.3
-  date: '2016-10-10T20:40:32Z'
+  date: 2016-10-10T20:40:32Z
   commits:
     - hash: 0b7beca7f88455e08bf81a2dc66b42d8564c7852
       author: Pagan Gazzard
       subject: Update to coffee-script 1.11
-      body: ''
+      body: ""
     - hash: 06a4429588e5e4e4af3041da393b2a377e60c02d
       author: Pagan Gazzard
       subject: Add resin-lint
-      body: ''
+      body: ""
     - hash: 59ca68f6e3445429fd72e3acd0482ea7850081ac
       author: Pagan Gazzard
       subject: Update to bluebird 3
-      body: ''
+      body: ""
