@@ -1,8 +1,8 @@
-import * as Promise from 'bluebird';
-import { writeFile } from 'fs';
+import Bluebird from 'bluebird';
+import { writeFileSync } from 'fs';
 
-const writeFileAsync = Promise.promisify(writeFile);
-Promise.config({
+const writeFile = Bluebird.promisify(writeFileSync);
+Bluebird.config({
 	// Enable cancellation
 	cancellation: true,
 });
@@ -14,27 +14,21 @@ type Pattern = {
 	pause: number;
 };
 
-const numToArray = (n: number) => {
-	const r = new Array(n);
-	for (let i = 0; i < n; i++) {
-		r[i] = undefined;
-	}
-	return r;
-};
+const arrayOf = (length: number) => Array.from(Array(length));
 
 // Helps in blinking the LED from the given end point.
 export = (ledFile: string) => {
-	const ledOn = () => writeFileAsync(ledFile, 1);
-	const ledOff = () => writeFileAsync(ledFile, 0);
+	const ledOn = () => writeFile(ledFile, '1', null);
+	const ledOff = () => writeFile(ledFile, '0', null);
 
 	const blink = (ms: number = 200) => {
 		ms ??= 200;
 		return ledOn().delay(ms).then(ledOff);
 	};
 
-	let blinking: null | Promise<void> = null;
-	const start = (pattern: Pattern): Promise<void> =>
-		Promise.resolve(numToArray(pattern.blinks))
+	let blinking: null | Bluebird<void> = null;
+	const start = (pattern: Pattern): Bluebird<void> =>
+		Bluebird.resolve(arrayOf(pattern.blinks))
 			.each(() => blink(pattern.onDuration).delay(pattern.offDuration))
 			.delay(pattern.pause)
 			.then(() => start(pattern));

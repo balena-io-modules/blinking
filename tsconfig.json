@@ -10,6 +10,8 @@
         "noUnusedParameters": true,
         "noUnusedLocals": true,
         "moduleResolution": "node",
+        "types": ["node"],
+        "esModuleInterop": true
     },
     "include": [
         "index.ts"
