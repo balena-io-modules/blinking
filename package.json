@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prepare": "npx tsc",
-    "lint": "balena-lint --typescript --fix index.ts",
+    "lint": "balena-lint index.ts",
+    "lint-fix": "balena-lint --fix index.ts",
     "test": "npm run lint && npm run prepare"
   },
   "repository": {
@@ -15,11 +16,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/bluebird": "^3.5.33",
-    "bluebird": "^3.0.0"
+    "@types/bluebird": "^3.5.36",
+    "bluebird": "^3.7.2"
   },
   "devDependencies": {
-    "@balena/lint": "^5.4.1",
-    "typescript": "^4.2.4"
+    "@balena/lint": "^6.2.0",
+    "typescript": "^4.8.3"
   }
 }
