@@ -1,7 +1,25 @@
 - commits:
+    - subject: Fix ledOn/ledOff to write a string rather than a number
+      hash: db2cb733412faa70e52e2b44699501c3ac905a2c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Update dependencies
+      hash: c7598468309bfe57d1d00d0debed129b47a2b6da
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.5
+  title: "'Updates'"
+  date: 2022-09-12T11:26:12.582Z
+- commits:
     - subject: Convert to typescript
       hash: 54aa604c3877eddb47791e37ee0bc9565e046227
-      body: ''
+      body: ""
       footer:
         Change-type: patch
         change-type: patch
@@ -9,17 +27,17 @@
   version: 0.0.4
   date: 2021-04-16T11:49:49.070Z
 - version: 0.0.3
-  date: '2016-10-10T20:40:32Z'
+  date: 2016-10-10T20:40:32Z
   commits:
     - hash: 0b7beca7f88455e08bf81a2dc66b42d8564c7852
       author: Pagan Gazzard
       subject: Update to coffee-script 1.11
-      body: ''
+      body: ""
     - hash: 06a4429588e5e4e4af3041da393b2a377e60c02d
       author: Pagan Gazzard
       subject: Add resin-lint
-      body: ''
+      body: ""
     - hash: 59ca68f6e3445429fd72e3acd0482ea7850081ac
       author: Pagan Gazzard
       subject: Update to bluebird 3
-      body: ''
+      body: ""
