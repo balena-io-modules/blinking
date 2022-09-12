@@ -24,8 +24,8 @@ const numToArray = (n: number) => {
 
 // Helps in blinking the LED from the given end point.
 export = (ledFile: string) => {
-	const ledOn = () => writeFileAsync(ledFile, 1);
-	const ledOff = () => writeFileAsync(ledFile, 0);
+	const ledOn = () => writeFileAsync(ledFile, '1');
+	const ledOff = () => writeFileAsync(ledFile, '0');
 
 	const blink = (ms: number = 200) => {
 		ms ??= 200;
