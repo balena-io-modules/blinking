@@ -1,6 +1,6 @@
 {
   "name": "blinking",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A module for \"blinking\" to a file (useful for writing to an LED file for actual blinks)",
   "main": "index.js",
   "types": "index.d.ts",
@@ -25,6 +25,6 @@
     "typescript": "^4.8.3"
   },
   "versionist": {
-    "publishedAt": "2022-09-12T11:26:12.636Z"
+    "publishedAt": "2022-09-14T19:55:44.767Z"
   }
 }

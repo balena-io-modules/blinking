@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add types to package.json
+      hash: 1c7cc4ba2a0811c963cf949d22929751dd263345
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Felipe Lalanne
+  version: 0.0.6
+  title: "'Add types to package.json'"
+  date: 2022-09-14T19:55:44.720Z
+- commits:
     - subject: Fix ledOn/ledOff to write a string rather than a number
       hash: db2cb733412faa70e52e2b44699501c3ac905a2c
       body: ""
