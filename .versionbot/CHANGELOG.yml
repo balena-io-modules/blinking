@@ -1,4 +1,15 @@
 - commits:
+    - subject: Publish the type declaration rather than the typescript source
+      hash: 9a93191e1e6d09a0562f656dde396061dd1ad29b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Page-
+  version: 0.0.7
+  title: ""
+  date: 2022-11-11T15:57:26.002Z
+- commits:
     - subject: Switch from balenaCI to flowzone
       hash: 1dc8ae39773c343ed67e24898c5199126c1cf570
       body: ""
