@@ -1,4 +1,15 @@
 - commits:
+    - subject: Switch from balenaCI to flowzone
+      hash: 1dc8ae39773c343ed67e24898c5199126c1cf570
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.6
+  title: ""
+  date: 2022-11-11T15:46:40.790Z
+- commits:
     - subject: Fix ledOn/ledOff to write a string rather than a number
       hash: db2cb733412faa70e52e2b44699501c3ac905a2c
       body: ""
