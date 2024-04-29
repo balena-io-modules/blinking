@@ -2,11 +2,12 @@
   "name": "blinking",
   "version": "0.0.7",
   "description": "A module for \"blinking\" to a file (useful for writing to an LED file for actual blinks)",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npx tsc",
-    "lint": "balena-lint index.ts",
-    "lint-fix": "balena-lint --fix index.ts",
+    "lint": "balena-lint src",
+    "lint-fix": "balena-lint --fix src",
     "test": "npm run lint && npm run prepare"
   },
   "repository": {
