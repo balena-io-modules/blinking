@@ -10,8 +10,9 @@
         "noUnusedParameters": true,
         "noUnusedLocals": true,
         "moduleResolution": "node",
+		"outDir": "./dist",
     },
     "include": [
-        "index.ts"
+        "src/index.ts"
     ]
 }
