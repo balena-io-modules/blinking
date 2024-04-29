@@ -1,4 +1,22 @@
 - commits:
+    - subject: Separate src and dist folders
+      hash: db59f983702965180595ce1fc32fd029ad1540a3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Update dev dependencies
+      hash: 1d2f9abe8ada14481a400e11e5256cdb4ae94a1e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.8
+  title: ""
+  date: 2024-04-29T15:19:34.605Z
+- commits:
     - subject: Publish the type declaration rather than the typescript source
       hash: 9a93191e1e6d09a0562f656dde396061dd1ad29b
       body: ""
