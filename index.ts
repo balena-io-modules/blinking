@@ -58,7 +58,7 @@ export = (ledFile: string) => {
 				return false;
 			}
 			blinking.cancel();
-			ledOff();
+			void ledOff();
 			blinking = null;
 		},
 	};

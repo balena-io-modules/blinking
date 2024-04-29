@@ -20,8 +20,9 @@
     "bluebird": "^3.7.2"
   },
   "devDependencies": {
-    "@balena/lint": "^6.2.0",
-    "typescript": "^4.8.3"
+    "@balena/lint": "^8.0.2",
+    "@types/node": "^16.18.96",
+    "typescript": "^5.4.5"
   },
   "versionist": {
     "publishedAt": "2022-11-11T15:57:26.059Z"
