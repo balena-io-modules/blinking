@@ -1,14 +1,13 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "Node16",
         "declaration": true,
         "strict": true,
         "removeComments": false,
         "preserveConstEnums": true,
         "target": "es2015",
         "noUnusedParameters": true,
-        "noUnusedLocals": true,
-        "moduleResolution": "node"
+        "noUnusedLocals": true
     },
     "include": [
         "src/**/*",
