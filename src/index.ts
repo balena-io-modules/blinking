@@ -1,10 +1,7 @@
-import Bluebird from 'bluebird';
-import { writeFile } from 'fs';
+import { promises as fs } from 'fs';
 
 // TODO: it would be better to import setTimeout from timers/promises however that does not work with the fakeTimer we use in tests.
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-const writeFileAsync = Bluebird.promisify(writeFile);
 
 type Pattern = {
 	blinks: number;
@@ -15,8 +12,8 @@ type Pattern = {
 
 // Helps in blinking the LED from the given end point.
 export = (ledFile: string) => {
-	const ledOn = () => writeFileAsync(ledFile, '1');
-	const ledOff = () => writeFileAsync(ledFile, '0');
+	const ledOn = () => fs.writeFile(ledFile, '1');
+	const ledOff = () => fs.writeFile(ledFile, '0');
 
 	const doBlink = async (ms: number, isCancelled?: () => boolean) => {
 		if (isCancelled?.()) {
