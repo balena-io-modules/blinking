@@ -1,4 +1,4 @@
-import * as Promise from 'bluebird';
+import Promise from 'bluebird';
 import { writeFile } from 'fs';
 
 const writeFileAsync = Promise.promisify(writeFile);

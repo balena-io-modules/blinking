@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as mockFs from 'mock-fs';
+import mockFs from 'mock-fs';
 import { useFakeTimers, SinonFakeTimers } from 'sinon';
 import { promises as fs } from 'fs';
 
