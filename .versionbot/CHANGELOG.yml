@@ -1,4 +1,15 @@
 - commits:
+    - subject: Switch tsconfig to node16 module mode
+      hash: 6c824e2aa6a1bdf92e74fc39805408e53a0a302b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.10
+  title: ""
+  date: 2024-07-30T09:34:08.054Z
+- commits:
     - subject: Add tests
       hash: 0924bdceb1fa747fe22d2efe0d2f9205a3148580
       body: ""
