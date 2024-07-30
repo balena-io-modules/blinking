@@ -1,4 +1,17 @@
 - commits:
+    - subject: Change cancellation method in order to avoid a recursive promise
+      hash: 09d52ff4b3342208ead5431045f04cc8f290bd0f
+      body: |
+        This means we avoid gradually leaking memory as the promise eternally
+        recurses with the pattern whilst still retaining the ability to cancel
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.12
+  title: ""
+  date: 2024-07-30T14:25:09.306Z
+- commits:
     - subject: Remove unnecessary `numToArray` function
       hash: eebf24694b5244e23713dedbae943cb3bc2d8089
       body: ""
