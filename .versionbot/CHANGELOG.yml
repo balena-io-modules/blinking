@@ -1,4 +1,15 @@
 - commits:
+    - subject: Remove unnecessary `numToArray` function
+      hash: eebf24694b5244e23713dedbae943cb3bc2d8089
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.11
+  title: ""
+  date: 2024-07-30T09:50:05.870Z
+- commits:
     - subject: Switch tsconfig to node16 module mode
       hash: 6c824e2aa6a1bdf92e74fc39805408e53a0a302b
       body: ""
