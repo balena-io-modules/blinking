@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add tests
+      hash: 0924bdceb1fa747fe22d2efe0d2f9205a3148580
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.0.9
+  title: ""
+  date: 2024-07-30T09:22:58.384Z
+- commits:
     - subject: Separate src and dist folders
       hash: db59f983702965180595ce1fc32fd029ad1540a3
       body: ""
