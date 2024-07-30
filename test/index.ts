@@ -43,6 +43,14 @@ describe('blinking', () => {
 		blink.pattern.stop();
 		await clock.tickAsync(1);
 		await expectLedTurnedOff();
+		await clock.tickAsync(200);
+		await expectLedTurnedOff();
+		await clock.tickAsync(200);
+		await expectLedTurnedOff();
+		await clock.tickAsync(200);
+		await expectLedTurnedOff();
+		await clock.tickAsync(200);
+		await expectLedTurnedOff();
 	});
 
 	it('blinks with custom pattern', async () => {
@@ -60,10 +68,10 @@ describe('blinking', () => {
 				await clock.tickAsync(pattern.onDuration - 2);
 				// 499 ms
 				await expectLedTurnedOn();
-				await clock.tickAsync(1);
-				// 500 ms
+				await clock.tickAsync(2);
+				// 501 ms
 				await expectLedTurnedOff();
-				await clock.tickAsync(pattern.offDuration - 1);
+				await clock.tickAsync(pattern.offDuration - 2);
 				// 799 ms
 				await expectLedTurnedOff();
 				await clock.tickAsync(1);

@@ -1,11 +1,7 @@
-import Promise from 'bluebird';
+import Bluebird from 'bluebird';
 import { writeFile } from 'fs';
 
-const writeFileAsync = Promise.promisify(writeFile);
-Promise.config({
-	// Enable cancellation
-	cancellation: true,
-});
+const writeFileAsync = Bluebird.promisify(writeFile);
 
 type Pattern = {
 	blinks: number;
@@ -19,22 +15,42 @@ export = (ledFile: string) => {
 	const ledOn = () => writeFileAsync(ledFile, '1');
 	const ledOff = () => writeFileAsync(ledFile, '0');
 
-	const blink = (ms: number = 200) => {
-		ms ??= 200;
-		return ledOn().delay(ms).then(ledOff);
+	const doBlink = async (ms: number, isCancelled?: () => boolean) => {
+		if (isCancelled?.()) {
+			return true;
+		}
+		await ledOn();
+		await Bluebird.delay(ms);
+		if (isCancelled?.()) {
+			return true;
+		}
+		await ledOff();
 	};
 
-	let blinking: null | Promise<void> = null;
-	const start = (pattern: Pattern): Promise<void> =>
-		Promise.resolve(new Array(pattern.blinks))
-			.each(() => blink(pattern.onDuration).delay(pattern.offDuration))
-			.delay(pattern.pause)
-			.then(() => start(pattern));
+	const blink = async (ms = 200) => {
+		ms ??= 200;
+		await doBlink(ms);
+	};
+
+	let blinkingCancel: (() => void) | undefined;
+	const start = async (
+		pattern: Pattern,
+		isCancelled: () => boolean,
+	): Promise<void> => {
+		for (let i = 0; i < pattern.blinks; i++) {
+			if (await doBlink(pattern.onDuration, isCancelled)) {
+				return;
+			}
+			await Bluebird.delay(pattern.offDuration);
+		}
+		await Bluebird.delay(pattern.pause);
+		void start(pattern, isCancelled);
+	};
 
 	blink.pattern = {
 		start(pattern: Partial<Pattern> = {}) {
 			pattern ??= {};
-			if (blinking != null) {
+			if (blinkingCancel != null) {
 				return false;
 			}
 			const fullPattern = {
@@ -43,15 +59,19 @@ export = (ledFile: string) => {
 				offDuration: pattern.offDuration ?? 200,
 				pause: pattern.pause ?? 0,
 			};
-			blinking = start(fullPattern);
+			let cancelled = false;
+			blinkingCancel = () => {
+				cancelled = true;
+			};
+			void start(fullPattern, () => cancelled);
 		},
 		stop() {
-			if (blinking == null) {
+			if (blinkingCancel == null) {
 				return false;
 			}
-			blinking.cancel();
+			blinkingCancel();
 			void ledOff();
-			blinking = null;
+			blinkingCancel = undefined;
 		},
 	};
 
