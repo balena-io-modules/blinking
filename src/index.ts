@@ -28,7 +28,6 @@ export = (ledFile: string) => {
 	};
 
 	const blink = async (ms = 200) => {
-		ms ??= 200;
 		await doBlink(ms);
 	};
 
