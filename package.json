@@ -2,13 +2,15 @@
   "name": "blinking",
   "version": "0.0.8",
   "description": "A module for \"blinking\" to a file (useful for writing to an LED file for actual blinks)",
+  "type": "commonjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepare": "npx tsc",
+    "prepare": "npx tsc --project tsconfig.build.json",
     "lint": "balena-lint src",
     "lint-fix": "balena-lint --fix src",
-    "test": "npm run lint && npm run prepare"
+    "pretest": "npm run prepare",
+    "test": "mocha && npm run lint && npx tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,24 @@
   },
   "devDependencies": {
     "@balena/lint": "^8.0.2",
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "@types/mock-fs": "^4.13.4",
     "@types/node": "^16.18.96",
+    "@types/sinon": "^17.0.3",
+    "chai": "^4.5.0",
+    "mocha": "^10.7.0",
+    "mock-fs": "^5.2.0",
+    "sinon": "^18.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "mocha": {
+    "reporter": "spec",
+    "recursive": true,
+    "require": "ts-node/register/transpile-only",
+    "bail": true,
+    "_": "test/*"
   },
   "versionist": {
     "publishedAt": "2024-04-29T15:19:34.661Z"
