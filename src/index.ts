@@ -14,14 +14,6 @@ type Pattern = {
 	pause: number;
 };
 
-const numToArray = (n: number) => {
-	const r = new Array(n);
-	for (let i = 0; i < n; i++) {
-		r[i] = undefined;
-	}
-	return r;
-};
-
 // Helps in blinking the LED from the given end point.
 export = (ledFile: string) => {
 	const ledOn = () => writeFileAsync(ledFile, '1');
@@ -34,7 +26,7 @@ export = (ledFile: string) => {
 
 	let blinking: null | Promise<void> = null;
 	const start = (pattern: Pattern): Promise<void> =>
-		Promise.resolve(numToArray(pattern.blinks))
+		Promise.resolve(new Array(pattern.blinks))
 			.each(() => blink(pattern.onDuration).delay(pattern.offDuration))
 			.delay(pattern.pause)
 			.then(() => start(pattern));
