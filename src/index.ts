@@ -1,6 +1,9 @@
 import Bluebird from 'bluebird';
 import { writeFile } from 'fs';
 
+// TODO: it would be better to import setTimeout from timers/promises however that does not work with the fakeTimer we use in tests.
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 const writeFileAsync = Bluebird.promisify(writeFile);
 
 type Pattern = {
@@ -20,7 +23,7 @@ export = (ledFile: string) => {
 			return true;
 		}
 		await ledOn();
-		await Bluebird.delay(ms);
+		await delay(ms);
 		if (isCancelled?.()) {
 			return true;
 		}
@@ -41,9 +44,9 @@ export = (ledFile: string) => {
 			if (await doBlink(pattern.onDuration, isCancelled)) {
 				return;
 			}
-			await Bluebird.delay(pattern.offDuration);
+			await delay(pattern.offDuration);
 		}
-		await Bluebird.delay(pattern.pause);
+		await delay(pattern.pause);
 		void start(pattern, isCancelled);
 	};
 
