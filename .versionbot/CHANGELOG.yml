@@ -1,4 +1,50 @@
 - commits:
+    - subject: Only default to 200ms if undefined is passed as `ms`, not null
+      hash: 5e4ded39775537730526b1bb018b9d3902d46cd2
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Pagan Gazzard
+    - subject: Enable sourcemap support
+      hash: e46dc921c8379e1f99f3f7c222f577dbb4cc1557
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+    - subject: Use native promisified `fs.writeFile` rather than bluebird promisify
+      hash: 6bd094b2dabdf45afaa8a36193f72eb6e924c48d
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Pagan Gazzard
+    - subject: Use promisified native `setTimeout` rather than `Bluebird.delay`
+      hash: 34f1307c97644215c2b1e49ee8a7bd80041a2383
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Pagan Gazzard
+    - subject: Switch tsconfig target to es2022
+      hash: 7f6d876fff1a82e3e7ae3dc1b498afde3cbd3879
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Pagan Gazzard
+    - subject: Set minimum nodejs version to 18.x
+      hash: 9e1369b2af1b6aead979e8406b1f2aa425e37c5f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 1.0.0
+  title: ""
+  date: 2024-08-02T15:45:45.539Z
+- commits:
     - subject: Change cancellation method in order to avoid a recursive promise
       hash: 09d52ff4b3342208ead5431045f04cc8f290bd0f
       body: |

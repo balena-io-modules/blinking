@@ -1,6 +1,6 @@
 {
   "name": "blinking",
-  "version": "0.0.12",
+  "version": "1.0.0",
   "description": "A module for \"blinking\" to a file (useful for writing to an LED file for actual blinks)",
   "type": "commonjs",
   "main": "dist/index.js",
@@ -43,6 +43,6 @@
     "_": "test/*"
   },
   "versionist": {
-    "publishedAt": "2024-07-30T14:25:09.350Z"
+    "publishedAt": "2024-08-02T15:45:45.618Z"
   }
 }
