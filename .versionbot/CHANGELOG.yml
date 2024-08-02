@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add npmrc
+      hash: 0b325d990c6bdd45e8af80ccaa7eda17e1e135e0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Felipe Lalanne
+  version: 1.0.1
+  title: ""
+  date: 2024-08-02T16:16:08.976Z
+- commits:
     - subject: Only default to 200ms if undefined is passed as `ms`, not null
       hash: 5e4ded39775537730526b1bb018b9d3902d46cd2
       body: ""
