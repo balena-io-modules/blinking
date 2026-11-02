@@ -20,7 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "@balena/lint": "^9.3.13",
-    "@types/chai": "^4.3.20",
+    "@types/chai": "^5.0.0",
     "@types/mocha": "^10.0.10",
     "@types/mock-fs": "^4.13.4",
     "@types/node": "^18.19.130",
